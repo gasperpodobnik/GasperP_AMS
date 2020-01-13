@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, './Scripts')
-import funkcije, funkcije_adni
+import funkcije
 import numpy as np
 import pandas as pd
 import os, sys
@@ -30,7 +30,8 @@ model = keras.models.load_model(model_path)
 X_test, y_test_df, y_test_dummies = funkcije.each_set_preprocess(list(set(test_df.index.to_list())),
                                                                  test_df,
                                                                  test_npy,
-                                                                 mode = mode)
+                                                                 mode = mode,
+                                                                 modalitete=modalitete)
 
 y_test_predicted = model.predict(X_test)
 score = model.evaluate(X_test, y_test_dummies, verbose=0)
