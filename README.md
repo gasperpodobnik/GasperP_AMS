@@ -16,7 +16,7 @@ Ker datoteke z utežmi modelov presegajo omejitev 25 MB, prilagam povezavo do mo
 | Alzheimer  | modalities_model3_T1W_T2W_FLAIR_OTHER_VGG16.h5 |                      |   |
 
 ## Data
-Iz enakih razlogov kot zgoraj prilagam povezavo do moje Google Drive računa, kjer so na voljo podatki s katerimi se lahko poganja eksperimente: https://drive.google.com/drive/folders/1MfSbVUqwaNObokJX3iQaMFXZqgbjVDin?usp=sharing
+Iz enakih razlogov kot zgoraj prilagam povezavo do moje Google Drive računa, kjer so na voljo podatki s katerimi se lahko poganja eksperimente: https://drive.google.com/drive/folders/1zNRPShB3ZlRaUb109Xt4feCabqcX58Jq?usp=sharing
 
 | problem    | model name                                     | opis                                     |   |
 |------------|------------------------------------------------|------------------------------------------|---|
