@@ -8,7 +8,7 @@ import keras
 
 ## example that uses model for classifying MRI images into modalities group [T1w, T2w, FLAIR, OTHER]
 # choose which dataset to you for prediction
-dataset_name = 'modalities_images_dataset_B'
+dataset_name = 'modalities_dataset_B'
 model_name = 'modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5'
 mode = int(model_name.split('_')[1][-1])
 # path to save graphs
