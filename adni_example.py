@@ -12,6 +12,7 @@ dataset_name = 'adni_ss_179_180_181'
 model_name = 'adni_v2_179_180_181.h5'
 # path to save graphs
 save_path = os.path.join(os.getcwd(), 'ADNI_results')
+funkcije.create_folder(save_path)
 
 # Import data
 X_all = np.load(os.path.join('Data', dataset_name + '.npy'))
