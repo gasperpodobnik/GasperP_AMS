@@ -13,6 +13,7 @@ model_name = 'modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5'
 mode = int(model_name.split('_')[1][-1])
 # path to save graphs
 save_path = os.path.join(os.getcwd(), 'MODALITIES_results')
+funkcije.create_folder(save_path)
 modalitete = ['T1W', 'T2W', 'FLAIR', 'OTHER']
 
 # Import data
