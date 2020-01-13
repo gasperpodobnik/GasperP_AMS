@@ -8,12 +8,12 @@ Ker datoteke z utežmi modelov presegajo omejitev 25 MB, prilagam povezavo do mo
 
 | problem    | model name                                     | input shape          |   |
 |------------|------------------------------------------------|----------------------|---|
-| Modelities | adni_ss_158_159_160.h5                         |                      |   |
-| Modelities | adni_ss_179_180_181.h5                         |                      |   |
-| Modelities | adni_v2_179_180_181.h5                         |                      |   |
-| Alzheimer  | modalities_model1_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3)  |   |
-| Alzheimer  | modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5 | [(None, 128, 128, 3), (None, 128, 128, 3), (None, 128, 128, 3)]                     |   |
-| Alzheimer  | modalities_model3_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3)  |   |
+| Alzheimer | adni_ss_158_159_160.h5                          |  (None, 128, 128, 3) |   |
+| Alzheimer | adni_ss_179_180_181.h5                          |  (None, 128, 128, 3) |   |
+| Alzheimer | adni_v2_179_180_181.h5                          |  (None, 128, 128, 3) |   |
+| Modelities  | modalities_model1_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3) |   |
+| Modelities  | modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5 | [(None, 128, 128, 3), (None, 128, 128, 3), (None, 128, 128, 3)]   |   |
+| Modelities  | modalities_model3_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3)  |   |
 
 ## Data
 Iz enakih razlogov kot zgoraj prilagam povezavo do moje Google Drive računa, kjer so na voljo podatki s katerimi se lahko poganja eksperimente: https://drive.google.com/drive/folders/1zNRPShB3ZlRaUb109Xt4feCabqcX58Jq?usp=sharing
