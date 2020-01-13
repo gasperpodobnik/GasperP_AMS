@@ -29,10 +29,13 @@ Due to same reasons as outlined above, I attach example data in my Google Drive 
 
 | problem    | ndarray name                                   | true labels dataframe                    |
 |------------|------------------------------------------------|------------------------------------------|
-| Modelities | modalities_images_dataset_B.npy                |  modalities_true_labels_dataset_B_df     |
+| Modalities | modalities_images_dataset_B.npy                |  modalities_true_labels_dataset_B_df     |
 | Alzheimer  | adni_images_ss_179_180_181.npy                 |  adni_true_labels_ss_179_180_181_df      | 
 
 ## Examples
 Python script adni_example.py shows how to use model for classification into the following classes [CN, MCI, AD] based on example data in folder Data
 
 Python script modalities_example.py shows how to use model for MRI modalities classification into the following classes [T1w, T2w, FLAIR, OTHER] based on example data in folder Data
+
+## Literature
+Please refer to two PDF reports for more details
