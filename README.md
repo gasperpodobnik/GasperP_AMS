@@ -1,5 +1,5 @@
 # GasperP_AMS: Deep neural networks for early diagnosis of neurological disorders from MR images
-Code and trained models that were developed as a project under subject Analysis of medical images
+Code and trained models that were developed as a project as part of subject Analysis of medical images
 
 ### The purpose of this project is to offer trained model:
 ### 1. for MRI modality classification [T1w, T2w, FLAIR, OTHER]; problem = Modalities
