@@ -14,3 +14,13 @@ Ker datoteke z utežmi modelov presegajo omejitev 25 MB, prilagam povezavo do mo
 | Alzheimer  | modalities_model1_T1W_T2W_FLAIR_OTHER_VGG16.h5 |                      |   |
 | Alzheimer  | modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5 |                      |   |
 | Alzheimer  | modalities_model3_T1W_T2W_FLAIR_OTHER_VGG16.h5 |                      |   |
+
+## Data
+Iz enakih razlogov kot zgoraj prilagam povezavo do moje Google Drive računa, kjer so na voljo podatki s katerimi se lahko poganja eksperimente: https://drive.google.com/drive/folders/1MfSbVUqwaNObokJX3iQaMFXZqgbjVDin?usp=sharing
+
+| problem    | model name                                     | opis                                     |   |
+|------------|------------------------------------------------|------------------------------------------|---|
+| Alzheimer  | adni_images_ss_179_180_181.npy                 |  ndarray s slikami                       |   |
+| Alzheimer  | adni_true_labels_ss_179_180_181_df             |  referencni podatki za zgornji ndarray   |   |
+| Modelities | modalities_images_dataset_B.npy                |  ndarray s slikami                       |   |
+| Modelities | modalities_true_labels_dataset_B_df            |  referencni podatki za zgornji ndarray   |   |
