@@ -894,17 +894,37 @@ def save_dataset(npy_X, df_y, description, final_folder_path):
 def normalize_CAM(X_cam):
     return X_cam/np.sum(np.sum(X_cam, axis=1), axis=1)[:, np.newaxis, np.newaxis]
 
-def each_set_preprocess(list_of_names, df, npy, mode):
+def each_set_preprocess(list_of_names, df, npy, mode, modalitete):
         X, y_df = prepare_3_channel_np_arrays(list_of_names,
                                                        df,
                                                        npy,
                                                        num_of_sices=3,
                                                        mode=mode)
-        if self.npy_mode == 2:  # three same images in three channels
-            X = [X[i] for i in range(self.num_of_slices_per_mri)]
+        if mode == 2:  # three same images in three channels
+            X = [X[i] for i in range(3)]
 
-        y_dummies = to_dummies(y_df, self.modalitete)
+        y_dummies = to_dummies(y_df, modalitete)
         return X, y_df, y_dummies
+
+def prepare_X_y_adni(X_in, y_in_df, indices, mode, num_of_imgs=3, image_size = 128, ref_col_name = 'disease_status'):
+    y_out_df = pd.DataFrame()
+    if mode == 1 or mode == 3:
+        X_out = np.zeros((len(indices), image_size, image_size, num_of_imgs))
+        for enum, idx in enumerate(indices):
+            slices = np.arange(y_in_df.shape[0])[y_in_df['Image Data ID'] == idx]
+            # print(slices)
+            X_out[enum] = np.moveaxis(standardize(X_in[slices]), 0, -1)
+            y_out_df = y_out_df.append(y_in_df.iloc[slices[0]])
+    elif mode == 2:
+        X_out_i = np.zeros((3, len(indices), image_size, image_size, num_of_imgs))
+        list_tmp = y_in_df.index.to_list()
+        for iter, idx in enumerate(indices):
+            slices = np.arange(y_in_df.shape[0])[y_in_df['Image Data ID'] == idx]
+            y_out_df = y_out_df.append(y_in_df.iloc[slices[0]])
+            for pos, s in enumerate(slices):
+                X_out_i[pos, iter, :, :, :] = np.stack((standardize(X_in[s]),) * 3, axis=-1)
+        X_out = [X_out_i[0], X_out_i[1], X_out_i[2]]
+    return X_out, y_out_df
 
 if __name__ == "__main__":
     print('Nič')
