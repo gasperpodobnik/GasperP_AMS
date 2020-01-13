@@ -894,5 +894,17 @@ def save_dataset(npy_X, df_y, description, final_folder_path):
 def normalize_CAM(X_cam):
     return X_cam/np.sum(np.sum(X_cam, axis=1), axis=1)[:, np.newaxis, np.newaxis]
 
+def each_set_preprocess(self, list_of_names, df, npy, mode):
+        X, y_df = prepare_3_channel_np_arrays(list_of_names,
+                                                       df,
+                                                       npy,
+                                                       num_of_sices=3,
+                                                       mode=mode)
+        if self.npy_mode == 2:  # three same images in three channels
+            X = [X[i] for i in range(self.num_of_slices_per_mri)]
+
+        y_dummies = to_dummies(y_df, self.modalitete)
+        return X, y_df, y_dummies
+
 if __name__ == "__main__":
     print('Nič')
