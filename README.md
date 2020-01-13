@@ -12,14 +12,16 @@ Note that not all libraries are needed if you intend to just use this models for
 ## Models
 Due to the fact that files with model weights exceed 25 MB, I attach these files in the following link to my Google Drive: https://drive.google.com/drive/folders/1MfSbVUqwaNObokJX3iQaMFXZqgbjVDin?usp=sharing
 
-| problem     | model name                                     | input shape          |   |
+#### For all models three (preferably consecutive) slices with shape 128x128 are needed: [1,2,3]
+
+| problem     | model name                                     | input shape          | slices  |
 |-------------|------------------------------------------------|----------------------|---|
-| Modalities  | modalities_model1_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3) |   |
-| Modalities  | modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5 | [(None, 128, 128, 3), (None, 128, 128, 3), (None, 128, 128, 3)]   |   |
-| Modalities  | modalities_model3_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3)  |   |
-| Alzheimer   | adni_ss_158_159_160.h5                          |  (None, 128, 128, 3) |   |
-| Alzheimer   | adni_ss_179_180_181.h5                          |  (None, 128, 128, 3) |   |
-| Alzheimer   | adni_v2_179_180_181.h5                          |  (None, 128, 128, 3) |   |
+| Modalities  | modalities_model1_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3) | [1,2,3]  |
+| Modalities  | modalities_model2_T1W_T2W_FLAIR_OTHER_VGG16.h5 | [(None, 128, 128, 3), (None, 128, 128, 3), (None, 128, 128, 3)]   | [[1,1,1], [2,2,2], [3,3,3]]  |
+| Modalities  | modalities_model3_T1W_T2W_FLAIR_OTHER_VGG16.h5 | (None, 128, 128, 3)  | [1,2,3]  |
+| Alzheimer   | adni_ss_158_159_160.h5                          |  (None, 128, 128, 3) | [1,2,3]  |
+| Alzheimer   | adni_ss_179_180_181.h5                          |  (None, 128, 128, 3) | [1,2,3]  |
+| Alzheimer   | adni_v2_179_180_181.h5                          |  (None, 128, 128, 3) | [1,2,3]  |
 
 
 ## Data
