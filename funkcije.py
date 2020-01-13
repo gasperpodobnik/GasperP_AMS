@@ -270,7 +270,6 @@ def writeResToExcel_from_df(excel_name, meta_data, new_data_df, header, results_
     writer.save()
 
 def saveROC(y_test, y_pred, save_figure, res_path, graph_num):
-    os.chdir(res_path)
     fig_name = str(graph_num) + '_ROC'
     n_classes = y_pred.shape[1]
     lw = 2
@@ -329,7 +328,7 @@ def saveROC(y_test, y_pred, save_figure, res_path, graph_num):
         plt.ylabel('True Positive Rate')
         plt.title('Some extension of Receiver operating characteristic to multi-class')
         plt.legend(loc="lower right")
-        plt.savefig(fig_name + '.png')
+        plt.savefig(os.path.join(res_path, fig_name + '.png'))
         plt.close(fig)
     return roc_auc['micro'], roc_auc['macro']
 
@@ -439,8 +438,8 @@ def from_dummies(y, categ):
     return y_df.idxmax(axis=1).to_list()
 
 def load_datasets(base_path, file_name, out_classes):
-    features_and_references_file_name = 'features_and_references_dataframe_1866'
-    features_and_references_dataframe = pd.read_pickle(os.path.join(r'/home/jovyan/shared/InteliRad-gasper', features_and_references_file_name))
+    features_and_references_file_name = 'Data/features_and_references_dataframe_1866'
+    features_and_references_dataframe = pd.read_pickle(os.path.join(r'Data', features_and_references_file_name))
     if len(out_classes) == 4:
         col = 'sequence'
     elif len(out_classes) == 5:
@@ -664,7 +663,7 @@ def izris_nap_klasif(experiment_folder_name, imgs_folder_name):
     base_path = r'/home/jovyan/shared/InteliRad-gasper'
     experiment_path = os.path.join(base_path, experiment_folder_name)
     imgs_folder_path = os.path.join(base_path, imgs_folder_name)
-    features_and_references_file_name = 'features_and_references_dataframe_1866'
+    features_and_references_file_name = 'Data/features_and_references_dataframe_1866'
     features_and_references_dataframe = pd.read_pickle(os.path.join(base_path, features_and_references_file_name))
     os.chdir(experiment_path)
     num_of_slices = 3
@@ -723,7 +722,7 @@ def create_all_in_one_excel(experiment_folder_name, imgs_folder_name):
     base_path = r'/home/jovyan/shared/InteliRad-gasper'
     experiment_path = os.path.join(base_path, experiment_folder_name)
     imgs_folder_path = os.path.join(base_path, imgs_folder_name)
-    features_and_references_file_name = 'features_and_references_dataframe_1866'
+    features_and_references_file_name = 'Data/features_and_references_dataframe_1866'
     features_and_references_dataframe = pd.read_pickle(os.path.join(base_path, features_and_references_file_name))
     os.chdir(experiment_path)
     num_of_slices = 3
@@ -766,7 +765,7 @@ def create_cam_random_images(experiment_folder_name, imgs_folder_name):
     base_path = r'/home/jovyan/shared/InteliRad-gasper'
     experiment_path = os.path.join(base_path, experiment_folder_name)
     imgs_folder_path = os.path.join(base_path, imgs_folder_name)
-    features_and_references_file_name = 'features_and_references_dataframe_1866'
+    features_and_references_file_name = 'Data/features_and_references_dataframe_1866'
     features_and_references_dataframe = pd.read_pickle(os.path.join(base_path, features_and_references_file_name))
     os.chdir(experiment_path)
     num_of_slices = 3
