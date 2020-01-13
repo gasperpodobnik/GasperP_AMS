@@ -24,3 +24,7 @@ Iz enakih razlogov kot zgoraj prilagam povezavo do moje Google Drive računa, kj
 | Alzheimer  | adni_true_labels_ss_179_180_181_df             |  referencni podatki za zgornji ndarray   |   |
 | Modelities | modalities_images_dataset_B.npy                |  ndarray s slikami                       |   |
 | Modelities | modalities_true_labels_dataset_B_df            |  referencni podatki za zgornji ndarray   |   |
+
+## Examples
+Skripta adni_example.py prikaže način uporabe modela za razvrščanje v [CN, MCI, AD] na podatkih iz mape Data
+Skripta modalities_example.py prikaže način uporabe modela za razvrščanje v [T1w, T2w, FLAIR, OTHER] na podatkih iz mape Data
