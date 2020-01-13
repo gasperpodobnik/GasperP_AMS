@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, './Scripts')
-import funkcije, funkcije_adni
+import funkcije
 import numpy as np
 import pandas as pd
 import os, sys
@@ -24,7 +24,7 @@ model_path = os.path.join('Models', model_name)
 model = keras.models.load_model(model_path)
 
 uniq_indices = list(set(y_all_df['Image Data ID']))
-X_test, y_test = funkcije_adni.prepare_X_y(X_all, y_all_df, uniq_indices, mode=3)
+X_test, y_test = funkcije.prepare_X_y_adni(X_all, y_all_df, uniq_indices, mode=3)
 y_test_dummies = pd.get_dummies(pd.Categorical(y_test[ref_col_name], categories=[0, 1, 2], ordered=True)).values
 
 y_pred_dummies = model.predict(X_test)
