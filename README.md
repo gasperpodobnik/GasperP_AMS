@@ -3,7 +3,7 @@ Code and trained models that were developed as a project under subject Analysis 
 
 ### The purpose of this project is to offer trained model:
 ### 1. for MRI modality classification [T1w, T2w, FLAIR, OTHER]; problem = Modalities
-### 2. for classification of MRI images from ADNI database in three groups of people: cognitively normal, mild cognitive impairment and Alzheimer's disease; problem = Alzheimer
+### 2. for classification of MRI images from ADNI database in three groups of people: cognitively normal (CN), mild cognitive impairment (MCI) and Alzheimer's disease (AD); problem = Alzheimer
 
 ## Requirements
 Required libraries for running scripts is summarized in file req.txt
@@ -30,7 +30,6 @@ Due to same reasons as outlined above, I attach example data in my Google Drive 
 | Modelities | modalities_images_dataset_B.npy                |  modalities_true_labels_dataset_B_df     |   |
 
 ## Examples
-Skripta adni_example.py prikaže način uporabe modela za razvrščanje v [CN, MCI, AD] na podatkih iz mape Data
+Python script adni_example.py shows how to use model for classification into the following classes [CN, MCI, AD] based on example data in folder Data
 
-Skripta modalities_example.py prikaže način uporabe modela za razvrščanje v [T1w, T2w, FLAIR, OTHER] na podatkih iz mape Data
-
+Python script modalities_example.py shows how to use model for MRI modalities classification into the following classes [T1w, T2w, FLAIR, OTHER] based on example data in folder Data
