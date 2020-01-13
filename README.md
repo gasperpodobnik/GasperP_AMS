@@ -27,4 +27,5 @@ Iz enakih razlogov kot zgoraj prilagam povezavo do moje Google Drive računa, kj
 
 ## Examples
 Skripta adni_example.py prikaže način uporabe modela za razvrščanje v [CN, MCI, AD] na podatkih iz mape Data
+
 Skripta modalities_example.py prikaže način uporabe modela za razvrščanje v [T1w, T2w, FLAIR, OTHER] na podatkih iz mape Data
