@@ -894,7 +894,7 @@ def save_dataset(npy_X, df_y, description, final_folder_path):
 def normalize_CAM(X_cam):
     return X_cam/np.sum(np.sum(X_cam, axis=1), axis=1)[:, np.newaxis, np.newaxis]
 
-def each_set_preprocess(self, list_of_names, df, npy, mode):
+def each_set_preprocess(list_of_names, df, npy, mode):
         X, y_df = prepare_3_channel_np_arrays(list_of_names,
                                                        df,
                                                        npy,
